@@ -19,4 +19,17 @@ def directors_totals(nds)
   #
   # Be sure to return the result at the end!
   nil
+  hash = {}
+  i = 0
+  while i < nds.length do
+    j = 0
+    total = 0
+    while j < nds[i][:movies].length do
+      total += nds[i][:movies][j][:worldwide_gross]
+      j += 1
+    end
+    hash[nds[i][:name]] = total
+    i += 1
+  end
+  hash
 end
